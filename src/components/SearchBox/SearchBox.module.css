@@ -1,0 +1,25 @@
+.form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+  padding: 20px 10px;
+}
+
+.label {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+.field {
+  width: 250px;
+  height: 25px;
+  color: white;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: rgba(67, 66, 66, 0.5);
+}
