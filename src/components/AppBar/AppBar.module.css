@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: green;
+  height: 200px;
+}

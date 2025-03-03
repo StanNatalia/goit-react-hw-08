@@ -2,8 +2,8 @@ import css from "./Contact.module.css";
 import { FaUserAlt } from "react-icons/fa";
 import { BsTelephoneFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteContacts } from "../../redux/contactsOps";
-import { selectContacts } from "/src/redux/contactsSlice.js";
+import { deleteContacts } from "../../redux/contacts/operations";
+import { selectContacts } from "../../redux/contacts/selectors";
 
 export default function Contact({ id }) {
   const dispatch = useDispatch();
