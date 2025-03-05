@@ -1,7 +1,13 @@
 .wrapper {
+  height: 100px;
+  width: 100%;
   display: flex;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
   flex-direction: row;
-  justify-content: space-between;
-  color: green;
-  height: 200px;
+  justify-content: space-around;
+  margin-bottom: 80px;
+  border: 1px solid white;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }

@@ -22,20 +22,23 @@ const RegistrationForm = () => {
         <Form className={css.form}>
           <label className={css.label}>
             <span className={css.span}>Name:</span>
-            <Field name="name" />
+            <Field className={css.field} name="name" />
           </label>
           <label className={css.label}>
             <span className={css.span}>Email:</span>
-            <Field name="email" />
+            <Field className={css.field} name="email" />
           </label>
           <label className={css.label}>
             <span className={css.span}>Password:</span>
-            <Field name="password" type="password" />
+            <Field className={css.field} name="password" type="password" />
           </label>
           <button className={css.btn}>Register</button>
-          <p>
-            You already have account?<Link to="/login">Get it</Link>
-          </p>
+          <div className={css.tumb}>
+            <p>You already have account?</p>
+            <Link className={css.link} to="/login">
+              Get it
+            </Link>
+          </div>
         </Form>
       </Formik>
     </div>

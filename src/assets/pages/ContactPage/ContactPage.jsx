@@ -10,7 +10,7 @@ const ContactPage = () => {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
   return (
-    <div>
+    <div className={css.wrapper}>
       <h1 className={css.title}>Phonebook</h1>
       <ContactForm />
       <SearchBox />

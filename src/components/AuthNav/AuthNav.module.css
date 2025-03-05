@@ -5,11 +5,17 @@
 }
 
 .link {
-  color: white;
-  font-size: 40px;
+  font-size: 26px;
+  font-weight: 500;
+  color: red;
+  transition: color 0.4s;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
 }
 
 .active {
-  color: red;
-  font-size: 50px;
+  color: white;
+  text-decoration: underline;
 }

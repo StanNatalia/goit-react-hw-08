@@ -1,6 +1,6 @@
 import css from "../src/App.module.css";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useEffect } from "react";
 
@@ -12,23 +12,43 @@ import LoginForm from "./assets/pages/LoginPage/LoginForm";
 import ContactPage from "./assets/pages/ContactPage/ContactPage";
 import Layout from "./components/Layout/Layout";
 import { refreshUser } from "./redux/auth/operation";
+import { selectIsRefreshing } from "./redux/auth/selectors";
+import PrivateRoute from "./PrivateRoute";
+import RestrictedRoute from "./RestrictedRoute";
 
 function App() {
   const dispatch = useDispatch();
+
+  const isRefreshing = useSelector(selectIsRefreshing);
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return (
+  return isRefreshing ? null : (
     <div className={css.container}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route path="contacts" element={<ContactPage />} />
+          <Route
+            path="contacts"
+            element={
+              <PrivateRoute>
+                <ContactPage />
+              </PrivateRoute>
+            }
+          />
+          <Route path="/register" element={<RegistrationForm />} />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute
+                component={<LoginForm />}
+                redirectTo="/contacts"
+              />
+            }
+          />
         </Route>
-        <Route path="/register" element={<RegistrationForm />} />
-        <Route path="/login" element={<LoginForm />} />
       </Routes>
     </div>
   );

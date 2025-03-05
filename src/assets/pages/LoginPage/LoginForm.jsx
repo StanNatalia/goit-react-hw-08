@@ -32,18 +32,21 @@ const LoginForm = () => {
         <Form className={css.form}>
           <label className={css.label}>
             <span className={css.span}>Email:</span>
-            <Field name="email" />
+            <Field className={css.field} name="email" />
           </label>
           <label className={css.label}>
             <span className={css.span}>Password:</span>
-            <Field name="password" type="password" />
+            <Field className={css.field} name="password" type="password" />
           </label>
           <button type="submit" className={css.btn}>
             Login
           </button>
-          <p>
-            You do not have account yet?<Link to="/register">Get it</Link>
-          </p>
+          <div className={css.tumb}>
+            <p>You do not have account yet?</p>
+            <Link className={css.link} to="/register">
+              Get it
+            </Link>
+          </div>
         </Form>
       </Formik>
     </div>

@@ -11,7 +11,12 @@ const AuthNav = () => {
       >
         Register
       </NavLink>
-      <NavLink to="/login">Login</NavLink>
+      <NavLink
+        className={({ isActive }) => clsx(css.link, isActive && css.active)}
+        to="/login"
+      >
+        Login
+      </NavLink>
     </nav>
   );
 };

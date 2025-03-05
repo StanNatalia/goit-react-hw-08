@@ -7,7 +7,7 @@ const UserMenu = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
   return (
-    <div>
+    <div className={css.wrapper}>
       {user.name && <h3>{user.email}</h3>}
       <button
         className={css.btn}
