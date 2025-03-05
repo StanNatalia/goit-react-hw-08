@@ -11,7 +11,7 @@ import RegistrationForm from "./assets/pages/RegistrationPage/RegistrationForm";
 import LoginForm from "./assets/pages/LoginPage/LoginForm";
 import ContactPage from "./assets/pages/ContactPage/ContactPage";
 import Layout from "./components/Layout/Layout";
-import { refreshUser } from "./redux/auth/operation";
+import { refreshUser } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 import PrivateRoute from "./PrivateRoute";
 import RestrictedRoute from "./RestrictedRoute";
