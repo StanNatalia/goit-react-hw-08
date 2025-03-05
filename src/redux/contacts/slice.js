@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { addContacts, deleteContacts, fetchContacts } from "./operations";
 
 const initialState = {
-  items: [{ id: 1, name: "Natasha Stan", number: "123 - 12 - 12" }],
+  items: [{}],
   loading: false,
   error: null,
 };
