@@ -2,8 +2,9 @@ import { Field, Form, Formik } from "formik";
 import css from "./LoginForm.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { loginThunk } from "../../../redux/auth/operation";
+
 import toast from "react-hot-toast";
+import { loginThunk } from "../../redux/auth/operations";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,6 @@ const LoginForm = () => {
   };
 
   const handleSubmit = (values, options) => {
-    console.log(values);
     dispatch(loginThunk(values))
       .unwrap()
       .then((res) => {

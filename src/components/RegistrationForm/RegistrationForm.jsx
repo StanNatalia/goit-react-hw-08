@@ -3,7 +3,7 @@ import css from "./RegistrationForm.module.css";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
-import { registerThunk } from "../../../redux/auth/operation";
+import { registerThunk } from "../../redux/auth/operations";
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();

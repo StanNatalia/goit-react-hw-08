@@ -1,14 +1,22 @@
 import { Audio } from "react-loader-spinner";
-import ContactForm from "../../../components/ContactForm/ContactForm";
-import ContactList from "../../../components/ContactList/ContactList";
-import SearchBox from "../../../components/SearchBox/SearchBox";
+
 import css from "./ContactPage.module.css";
-import { useSelector } from "react-redux";
-import { selectError, selectLoading } from "../../../redux/contacts/selectors";
+import { useDispatch, useSelector } from "react-redux";
+
+import ContactForm from "../../components/ContactForm/ContactForm";
+import ContactList from "../../components/ContactList/ContactList";
+import SearchBox from "../../components/SearchBox/SearchBox";
+import { selectError, selectLoading } from "../../redux/contacts/selectors";
+import { useEffect } from "react";
+import { fetchContacts } from "../../redux/contacts/operations";
 
 const ContactPage = () => {
   const loading = useSelector(selectLoading);
   const error = useSelector(selectError);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, []);
   return (
     <div className={css.wrapper}>
       <h1 className={css.title}>Phonebook</h1>

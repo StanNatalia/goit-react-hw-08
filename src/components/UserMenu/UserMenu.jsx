@@ -8,7 +8,7 @@ const UserMenu = () => {
   const user = useSelector(selectUser);
   return (
     <div className={css.wrapper}>
-      {user.name && <h3>{user.email}</h3>}
+      {user.name && <h3>{user.name}</h3>}
       <button
         className={css.btn}
         type="button"
