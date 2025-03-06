@@ -42,13 +42,13 @@ function App() {
           <Route
             path="/login"
             element={
-              <RestrictedRoute
-                component={<LoginPage />}
-                redirectTo="/contacts"
-              />
+              <RestrictedRoute>
+                <LoginPage />
+              </RestrictedRoute>
             }
           />
         </Route>
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </div>
   );
