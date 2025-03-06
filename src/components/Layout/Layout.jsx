@@ -1,12 +1,11 @@
-import { Outlet } from "react-router-dom";
 import AppBar from "../AppBar/AppBar";
 import css from "./Layout.module.css";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div className={css.wrapper}>
       <AppBar />
-      <Outlet />
+      <main>{children}</main>
     </div>
   );
 };

@@ -4,7 +4,11 @@ import {
   logoutThunk,
   refreshUser,
   registerThunk,
+<<<<<<< HEAD
 } from "./operations";
+=======
+} from "./operations.js";
+>>>>>>> e67100ac78b198d23c28a73803ebbfe51030094f
 
 const initialState = {
   user: {
