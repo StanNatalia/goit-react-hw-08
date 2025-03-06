@@ -8,11 +8,7 @@ const UserMenu = () => {
   const user = useSelector(selectUser);
   return (
     <div className={css.wrapper}>
-<<<<<<< HEAD
-      {user.name && <h3>{user.name}</h3>}
-=======
       {user?.name && <h3>{user.name}</h3>}
->>>>>>> e67100ac78b198d23c28a73803ebbfe51030094f
       <button
         className={css.btn}
         type="button"
