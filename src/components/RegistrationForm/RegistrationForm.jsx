@@ -46,12 +46,16 @@ const RegistrationForm = () => {
             <label className={css.label}>
               <span className={css.span}>Name:</span>
               <Field className={css.field} name="name" />
-              <ErrorMessage className={css.error} name="name" component="p" />
+              <ErrorMessage className={css.error} name="name" component="div" />
             </label>
             <label className={css.label}>
               <span className={css.span}>Email:</span>
               <Field className={css.field} name="email" type="email" />
-              <ErrorMessage className={css.error} name="email" component="p" />
+              <ErrorMessage
+                className={css.error}
+                name="email"
+                component="div"
+              />
             </label>
             <label className={css.label}>
               <span className={css.span}>Password:</span>
@@ -59,7 +63,7 @@ const RegistrationForm = () => {
               <ErrorMessage
                 className={css.error}
                 name="password"
-                component="p"
+                component="div"
               />
             </label>
             <button type="submit" className={css.btn}>

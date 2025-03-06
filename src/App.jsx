@@ -6,7 +6,6 @@ import { useEffect } from "react";
 
 import { fetchContacts } from "./redux/contacts/operations";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "./assets/pages/HomePage/HomePage";
 import RegistrationForm from "./assets/pages/RegistrationPage/RegistrationForm";
 import LoginForm from "./assets/pages/LoginPage/LoginForm";
 import ContactPage from "./assets/pages/ContactPage/ContactPage";
@@ -15,6 +14,7 @@ import { refreshUser } from "./redux/auth/operations";
 import { selectIsRefreshing } from "./redux/auth/selectors";
 import PrivateRoute from "./PrivateRoute";
 import RestrictedRoute from "./RestrictedRoute";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   const dispatch = useDispatch();
