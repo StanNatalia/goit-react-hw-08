@@ -27,9 +27,9 @@ function App() {
 
   return isRefreshing ? null : (
     <div className={css.container}>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
           <Route
             path="contacts"
             element={
@@ -38,7 +38,14 @@ function App() {
               </PrivateRoute>
             }
           />
-          <Route path="/register" element={<RegistrationPage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute>
+                <RegistrationPage />
+              </RestrictedRoute>
+            }
+          />
           <Route
             path="/login"
             element={
@@ -47,9 +54,9 @@ function App() {
               </RestrictedRoute>
             }
           />
-        </Route>
-        <Route path="*" element={<HomePage />} />
-      </Routes>
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </Layout>
     </div>
   );
 }
